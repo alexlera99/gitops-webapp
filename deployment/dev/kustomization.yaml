@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- namespace.yaml
+- deployment.yaml
+- ingress.yaml
+- service.yaml
+namespace: dev
+images:
+- name: registry.gitlab.com/thekvothe/gitops-webapp
+  newTag: e47d40db061cbbabfc5b7685dec05f120699f851
