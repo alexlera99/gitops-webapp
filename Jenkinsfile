@@ -16,7 +16,8 @@ pipeline {
     stage('deploy-dev'){
       steps{
         sh 'curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash'
-        sh 'mv kustomize /usr/local/bin/'
+        sh 'git config --global user.email "gitlab@gitlab.com"'
+        sh 'git config --global user.name "GitLab CI/CD"'
       }
     }
   }
