@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment {
-    dockerImage = ''
+    dockerImage = 'iurewbiuewviuewbiu'
   }
   tools {
     go 'go'
