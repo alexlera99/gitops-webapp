@@ -2,7 +2,6 @@ pipeline {
   agent any
   tools {
     go 'go'
-    dockerTool 'docker'
   }
   stages {
     stage('Build') {
