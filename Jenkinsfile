@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment {
-    dockerImage = 'version 2'
+    dockerImage = 'version 233'
   }
   tools {
     go 'go'
