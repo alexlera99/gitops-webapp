@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('Build Docker Image') {
+    stage('Build') {
       steps {
         sh 'go build -o main main.go'
       }
