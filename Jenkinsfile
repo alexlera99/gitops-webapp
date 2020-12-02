@@ -7,6 +7,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'go build -o main main.go'
+        sh 'docker build -t gitops-webapp:${GIT_COMMIT} .'
       }
     }
 
