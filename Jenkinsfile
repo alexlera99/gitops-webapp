@@ -7,6 +7,8 @@ pipeline {
     go 'go'
   }
   stages {
+      
+
 
 
     stage('Build') {
@@ -17,17 +19,19 @@ pipeline {
     }
     stage('deploy-dev'){
       steps{
-        sh 'git remote set-url origin https://github.com/TheKvothe/gitops-webapp.git'
+        sh 'git remote set-url origin https://github.com/TheKvothe/jenkins-test.git'
         sh 'git config --global user.email "gitlab@gitlab.com"'
         sh 'git config --global user.name "GitLab CI/CD"'
         sh 'git checkout -B master'
         sh 'ls'
-        sh 'cd deployment/dev'
-        sh 'ls'
-        sh 'kustomize edit set image  gitops-webapp:${GIT_COMMIT} '
-        sh 'cat kustomization.yaml'
-        sh 'git commit -am "DEV image update"'
-        sh 'git push origin master'
+        sh script: '''
+            #!/bin/bash
+            echo "test" > test.txt
+            git add .
+            git commit -am "commit from pipeline"
+            git push origin master
+        '''
+        
       }
     }
   }
