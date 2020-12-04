@@ -29,7 +29,7 @@ pipeline {
         sh 'cd deployment/dev'
         sh 'kustomize edit set image  gitops-webapp:${GIT_COMMIT} '
         sh 'cat kustomization.yaml'
-        sh 'git commit -am '[skip ci] DEV image update''
+        sh 'git commit -am "[skip ci] DEV image update"'
         sh 'git push origin master'
       }
     }
