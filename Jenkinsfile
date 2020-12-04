@@ -7,12 +7,7 @@ pipeline {
     go 'go'
   }
   stages {
-    
-    stage('Checkout') {
-      steps {
-        scmSkip(deleteBuild: true, skipPattern:'.*\\[ci skip\\].*')
-      }
-    }
+
 
     stage('Build') {
       steps {
@@ -29,7 +24,7 @@ pipeline {
         sh 'cd deployment/dev'
         sh 'kustomize edit set image  gitops-webapp:${GIT_COMMIT} '
         sh 'cat kustomization.yaml'
-        sh 'git commit -am "[skip ci] DEV image update"'
+        sh 'git commit -am "DEV image update"'
         sh 'git push origin master'
       }
     }
