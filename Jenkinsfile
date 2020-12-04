@@ -16,7 +16,7 @@ pipeline {
     }
     stage('deploy-dev'){
       steps{
-        sh 'curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash'
+        sh 'git remote set-url origin https://github.com/TheKvothe/gitops-webapp.git'
         sh 'git config --global user.email "gitlab@gitlab.com"'
         sh 'git config --global user.name "GitLab CI/CD"'
       }
