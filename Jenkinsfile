@@ -28,8 +28,6 @@ pipeline {
   }
   tools {
     go 'go'
-  }
-  environment {
-    docker = 'docker'
+    dockerTool 'docker'
   }
 }
