@@ -11,7 +11,7 @@ pipeline {
     stage('deploy-dev') {
       steps {
         
-        git branch: 'master', credentialsId: 'jenkins', url: 'git@github.com:alexlera99/gitops-webapp.git'
+        git branch: 'master', credentialsId: 'jenkinsid', url: 'git@github.com:alexlera99/gitops-webapp.git'
         
         sh '''
             #!/bin/bash
