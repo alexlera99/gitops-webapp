@@ -19,7 +19,7 @@ pipeline {
             sh 'git config --global user.email gitlab@gitlab.com'
             sh 'git config --global user.name alexlera99'
             sh 'git checkout -B master'
-            sh 'echo "test5" > test.txt'
+            sh 'echo "test6" > test.txt'
             sh 'git add .'
             sh 'git commit -am "[ci skip] commit from pipeline"'
             sh 'git push origin master' 
