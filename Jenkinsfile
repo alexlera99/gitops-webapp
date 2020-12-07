@@ -30,5 +30,6 @@ pipeline {
   tools {
     go 'go'
     dockerTool 'docker'
+    git 'git'
   }
 }
