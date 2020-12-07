@@ -12,8 +12,8 @@ pipeline {
       steps {     
         sshagent(['jenkinsid']) {
             sh 'git remote set-url origin https://github.com/alexlera99/gitops-webapp.git'
-            sh 'git config --global user.email "gitlab@gitlab.com"'
-            sh 'git config --global user.name "GitLab CI/CD"'
+            sh 'git config --global user.email gitlab@gitlab.com'
+            sh 'git config --global user.name alexlera99'
             sh 'git checkout -B master'
             sh 'echo "test2" > test.txt'
             sh 'git add .'
