@@ -12,7 +12,7 @@ pipeline {
       steps {
         sh '''
             #!/bin/bash
-            git remote set-url origin https://github.com/alexlera99/jenkins-test.git
+            git remote set-url origin ssh://git@github.com:alexlera99/gitops-webapp.git
             git config --global user.email "gitlab@gitlab.com"
             git config --global user.name "GitLab CI/CD"
             git checkout -B master
