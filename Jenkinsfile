@@ -19,9 +19,10 @@ pipeline {
             sh 'git config --global user.email gitlab@gitlab.com'
             sh 'git config --global user.name alexlera99'
             sh 'git checkout -B master'
-            sh 'echo "test6" > test.txt'
-            sh 'git add .'
-            sh 'git commit -am "[ci skip] commit from pipeline"'
+            sh 'cd deployment/dev'
+            sh 'kustomize edit set image gitops-webapp:${GIT_COMMIT}'
+            sh 'cat kustomization.yaml'
+            sh 'git commit -am "[ci skip] DEV image update"'
             sh 'git push origin master' 
         }
       }
