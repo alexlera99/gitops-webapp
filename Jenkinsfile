@@ -18,7 +18,7 @@ pipeline {
             git config --global user.email "gitlab@gitlab.com"
             git config --global user.name "GitLab CI/CD"
             git checkout -B master
-            echo "test" > test.txt
+            echo "test2" > test.txt
             git add .
             git commit -am "commit from pipeline"
             git push origin master
