@@ -24,6 +24,7 @@ pipeline {
               cd deployment/dev
               kustomize edit set image gitops-webapp:${GIT_COMMIT}
               cat kustomization.yaml
+              sleep 1m
             '''
             sh 'git commit -am "[ci skip] DEV image update"'
             sh 'git push origin master' 
