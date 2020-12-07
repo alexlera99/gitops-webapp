@@ -9,7 +9,7 @@ pipeline {
     }
     stage('deploy-dev') {
       steps {       
-        sshagent(['jenkinsgit']) {
+        sshagent(['jenkinsid']) {
             sh 'git remote set-url origin git@github.com:alexlera99/gitops-webapp.git'
             sh 'git config --global user.email gitlab@gitlab.com'
             sh 'git config --global user.name alexlera99'
