@@ -7,5 +7,7 @@ resources:
 - service.yaml
 namespace: dev
 images:
+- name: gitops-webapp
+  newTag: 2a42cd7bf7bca6843a9afa760e588434026f18b4
 - name: registry.gitlab.com/thekvothe/gitops-webapp
   newTag: e47d40db061cbbabfc5b7685dec05f120699f851
