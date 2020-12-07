@@ -8,6 +8,6 @@ resources:
 namespace: dev
 images:
 - name: gitops-webapp
-  newTag: 5ee602b9faac1751f5a534337c278812cbd5e4f7
+  newTag: 1611ff0217d98c8d4b1549f2b038ed222d7916cc
 - name: registry.gitlab.com/thekvothe/gitops-webapp
   newTag: e47d40db061cbbabfc5b7685dec05f120699f851
