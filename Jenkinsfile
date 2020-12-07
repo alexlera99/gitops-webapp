@@ -10,9 +10,11 @@ pipeline {
 
     stage('deploy-dev') {
       steps {
+        
+        git branch: 'master', credentialsId: 'jenkins', url: 'git@github.com:alexlera99/gitops-webapp.git'
+        
         sh '''
             #!/bin/bash
-            git remote set-url origin ssh://git@github.com:alexlera99/gitops-webapp.git
             git config --global user.email "gitlab@gitlab.com"
             git config --global user.name "GitLab CI/CD"
             git checkout -B master
