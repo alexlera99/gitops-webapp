@@ -7,3 +7,5 @@ resources:
 - service.yaml
 namespace: dev
 images:
+- name: registry.hub.docker.com/alexlera/gitops-webapp
+  newTag: 9124d9754afe3d435af89d6368d204381bdac400
