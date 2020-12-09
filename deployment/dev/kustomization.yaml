@@ -8,4 +8,4 @@ resources:
 namespace: dev
 images:
 - name: alexlera/gitops-webapp
-  newTag: 9876ad55fd44116eb911782395bffb39867b4ee0
+  newTag: fc0754aae17efb10823445297d62cc7ea72f73eb
