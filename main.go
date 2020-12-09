@@ -23,7 +23,7 @@ func getPort() string {
 }
 
 func main() {
-   welcome := Welcome{"Argo es kk", time.Now().Format(time.Stamp), os.Getenv("HOSTNAME")}
+   welcome := Welcome{"Juan Carlos", time.Now().Format(time.Stamp), os.Getenv("HOSTNAME")}
 
    templates := template.Must(template.ParseFiles("templates/welcome-template.html"))
 
@@ -44,3 +44,4 @@ func main() {
    fmt.Println("Listening on port " + getPort());
    fmt.Println(http.ListenAndServe(getPort(), nil));
 }
+
