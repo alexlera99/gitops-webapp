@@ -1,4 +1,4 @@
-FROM scratch
+FROM ubuntu:18.04
 
 LABEL maintaner="Andrzej Kaczynski <andrew.kaczynski@gmail.com>"
 
