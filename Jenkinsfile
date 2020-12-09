@@ -21,7 +21,7 @@ pipeline {
       steps {
         sh 'go build -o main main.go'
         script { 
-            dockerImage = docker.build registry + "/gitops-webapp:$GIT_COMMIT"
+            dockerImage = docker.build(registry + "/gitops-webapp:$GIT_COMMIT")
             docker.withRegistry( '', registryCredential ) { 
                 dockerImage.push() 
             }
