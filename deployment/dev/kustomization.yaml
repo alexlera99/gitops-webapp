@@ -9,3 +9,5 @@ namespace: dev
 images:
 - name: alexlera/gitops-webapp
   newTag: 2dc87d3af1145300609c9e8877b7e66a77093d42
+- name: https://hub.docker.com/r/alexlera/gitops-webapp
+  newTag: 400b6f94d582c691e0298cad221aba241609d535
