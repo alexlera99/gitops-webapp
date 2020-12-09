@@ -7,5 +7,3 @@ resources:
 - service.yaml
 namespace: dev
 images:
-- name: gitops-webapp
-  newTag: 56783b9d17e1f0656aa07fdca0cad22a1ae94379
