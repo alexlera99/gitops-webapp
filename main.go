@@ -23,7 +23,7 @@ func getPort() string {
 }
 
 func main() {
-   welcome := Welcome{"Alex esta triste", time.Now().Format(time.Stamp), os.Getenv("HOSTNAME")}
+   welcome := Welcome{"Alex esta muy triste", time.Now().Format(time.Stamp), os.Getenv("HOSTNAME")}
 
    templates := template.Must(template.ParseFiles("templates/welcome-template.html"))
 
