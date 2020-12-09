@@ -8,4 +8,4 @@ resources:
 namespace: dev
 images:
 - name: registry.hub.docker.com/alexlera/gitops-webapp
-  newTag: d0e3ff2ac972260c6e8567c24bcc89366ba66d5d
+  newTag: 6ac05c08c6e24d73d1ebc00d2155e3c84272e1f3
