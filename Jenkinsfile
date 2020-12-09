@@ -38,7 +38,7 @@ pipeline {
             sh script: '''
             #!/bin/bash
               cd deployment/dev
-              kustomize edit set image gitops-webapp:${GIT_COMMIT}
+              kustomize edit set image alexlera/gitops-webapp:${GIT_COMMIT}
               cat kustomization.yaml
             '''
             sh 'git commit -am "[ci skip] DEV image update"'
