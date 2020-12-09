@@ -15,7 +15,7 @@ spec:
         app: gitops-webapp
     spec:
       containers:
-      - image: registry.gitlab.com/thekvothe/gitops-webapp:1.0
+      - image: alexlera/gitops-webapp:1.0
         name: gitops-webapp
         imagePullPolicy: Always
         ports:
