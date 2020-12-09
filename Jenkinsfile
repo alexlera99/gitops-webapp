@@ -1,4 +1,9 @@
 pipeline {
+  environment { 
+        registry = "alexlera99" 
+        registryCredential = 'dockerhub_id' 
+        dockerImage = '' 
+    }
   agent any
   stages {
     stage('Run CI?') {
@@ -15,7 +20,12 @@ pipeline {
     stage('Build') {
       steps {
         sh 'go build -o main main.go'
-        sh 'docker build -t gitops-webapp:${GIT_COMMIT} .'
+        script { 
+            dockerImage = docker.build registry + "gitops-webapp:$GIT_COMMIT"
+            docker.withRegistry( '', registryCredential ) { 
+                dockerImage.push() 
+            }
+        } 
       }
     }
     stage('deploy-dev') {
